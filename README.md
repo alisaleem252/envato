@@ -6,9 +6,9 @@ get your api key from https://build.envato.com/register/
 
 
 # Usage
-include('envato-api-class.php');
+        include('envato-api-class.php');
 
-$API = new envatoAPI();
+        $API = new envatoAPI();
         $API->set_api_key('ahdio270410ayap20hkdooxaadht5s');
         $API->set_username('JohnDoe');
         $API->set_api_set('verify-purchase:' . $purchase_code);
