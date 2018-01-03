@@ -1,4 +1,4 @@
-# envato
+# Envato
 Envato Marketplace API Class Updated
 
 # Envato API Class
