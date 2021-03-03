@@ -1,5 +1,5 @@
 # Envato
-Envato Marketplace API Class Updated
+Envato Marketplace API Class Updated, use this class to verify purchase of your products
 
 # Envato API Class
 get your api key from https://build.envato.com/register/
