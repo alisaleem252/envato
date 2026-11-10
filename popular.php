@@ -1,14 +1,14 @@
 <?php
-include('envato-api-class.php');
+require __DIR__ . '/envato-api-class.php';
 
-$API = new envatoAPI();
+// Token from https://build.envato.com/create-token/ (export ENVATO_TOKEN=... or pass it here)
+$API = new envatoAPI(getenv('ENVATO_TOKEN') ?: null);
 
-//$API->set_api_url();
-//$API->set_api_key('ahdio270410ayap20hkdooxaadht5s');
-//$API->set_username('JohnDoe'); // Envato username
-$API->set_api_set('popular:codecanyon'); // Set the API set to request
+$data = $API->popular('codecanyon');
 
-echo '<pre>';
-print_r( $API->request() );
-echo '</pre>';
-?>
+header('Content-Type: text/plain; charset=utf-8');
+if ($data === false) {
+    echo 'Error: ' . $API->last_error;
+} else {
+    print_r($data);
+}
